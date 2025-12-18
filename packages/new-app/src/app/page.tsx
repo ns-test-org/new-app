@@ -57,11 +57,11 @@ export default function TodoList() {
             onChange={(e) => setInputValue(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Add a new task..."
-            className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-purple-500 text-gray-800"
+            className="flex-1 px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-green-400 text-gray-800"
           />
           <button
             onClick={addTodo}
-            className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            className="px-6 py-3 bg-green-400 text-white rounded-lg font-semibold hover:bg-green-500 transition-colors"
           >
             Add
           </button>
@@ -81,7 +81,7 @@ export default function TodoList() {
                   type="checkbox"
                   checked={todo.completed}
                   onChange={() => toggleTodo(todo.id)}
-                  className="w-5 h-5 cursor-pointer accent-purple-500"
+                  className="w-5 h-5 cursor-pointer accent-green-400"
                 />
                 <span
                   className={`flex-1 text-gray-800 ${
@@ -113,6 +113,9 @@ export default function TodoList() {
     </div>
   );
 }
+
+
+
 
 
 
