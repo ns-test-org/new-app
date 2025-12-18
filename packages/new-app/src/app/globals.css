@@ -148,6 +148,93 @@ body {
   animation: bounce-horizontal 1.5s ease-in-out infinite;
 }
 
+/* Ocean Background Animation */
+.ocean-background {
+  background: linear-gradient(to bottom, 
+    #001f3f 0%,
+    #003d5c 25%,
+    #005f73 50%,
+    #0a9396 75%,
+    #94d2bd 100%
+  );
+  position: relative;
+}
+
+.ocean-waves {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ocean-waves::before,
+.ocean-waves::after {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(ellipse at center, 
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    transparent 70%
+  );
+}
+
+.ocean-waves::before {
+  animation: wave 15s ease-in-out infinite;
+}
+
+.ocean-waves::after {
+  animation: wave 20s ease-in-out infinite reverse;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5%, 10%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-5%, 5%) rotate(-5deg);
+  }
+  75% {
+    transform: translate(10%, -5%) rotate(3deg);
+  }
+}
+
+/* Floating bubbles effect */
+.ocean-background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 50px 80px, 80px 120px, 100px 150px;
+  background-position: 0 0, 40px 60px, 80px 100px;
+  animation: bubbles 25s linear infinite;
+  z-index: 2;
+}
+
+@keyframes bubbles {
+  0% {
+    background-position: 0 0, 40px 60px, 80px 100px;
+  }
+  100% {
+    background-position: 0 -800px, 40px -740px, 80px -700px;
+  }
+}
+
+
 
 
 

@@ -42,8 +42,9 @@ export default function TodoList() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-500 via-pink-500 to-orange-500 p-6 flex items-center justify-center">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8">
+    <div className="min-h-screen ocean-background p-6 flex items-center justify-center relative overflow-hidden">
+      <div className="ocean-waves"></div>
+      <div className="w-full max-w-md bg-white/95 backdrop-blur-sm rounded-2xl shadow-2xl p-8 relative z-10">
         <h1 className="text-4xl font-bold text-gray-800 mb-8 text-center">
           My Todo List
         </h1>
@@ -112,5 +113,6 @@ export default function TodoList() {
     </div>
   );
 }
+
 
 
