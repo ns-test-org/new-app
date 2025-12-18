@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ff8c00;
+  --background: linear-gradient(135deg, #ff0000 0%, #ff8800 100%);
   --foreground: #171717;
 }
 
@@ -14,7 +14,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #ff8c00;
+    --background: linear-gradient(135deg, #ff0000 0%, #ff8800 100%);
     --foreground: #ededed;
   }
 }
@@ -147,5 +147,7 @@ body {
 .animate-bounce-horizontal {
   animation: bounce-horizontal 1.5s ease-in-out infinite;
 }
+
+
 
 
